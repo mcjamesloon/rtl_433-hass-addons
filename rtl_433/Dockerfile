@@ -11,7 +11,8 @@ RUN apk add --no-cache --virtual .buildDeps \
     librtlsdr-dev \
     cmake \
     git \
-    jq
+    jq \
+    mosquitto-clients
 
 WORKDIR /build
 RUN git clone https://github.com/merbanan/rtl_433
