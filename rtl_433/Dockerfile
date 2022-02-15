@@ -13,7 +13,7 @@ RUN apk add --no-cache --virtual .buildDeps \
     git \
     jq \
     mosquitto \
-    mosquitto_pub
+    mosquitto-clients
 
 WORKDIR /build
 RUN git clone https://github.com/merbanan/rtl_433
