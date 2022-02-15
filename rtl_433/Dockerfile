@@ -10,7 +10,8 @@ RUN apk add --no-cache --virtual .buildDeps \
     libusb-dev \
     librtlsdr-dev \
     cmake \
-    git
+    git \
+    jq
 
 WORKDIR /build
 RUN git clone https://github.com/merbanan/rtl_433
