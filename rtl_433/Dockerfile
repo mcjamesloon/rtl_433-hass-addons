@@ -11,9 +11,7 @@ RUN apk add --no-cache --virtual .buildDeps \
     librtlsdr-dev \
     cmake \
     git \
-    jq \
-    mosquitto \
-    mosquitto-clients
+    jq
 
 WORKDIR /build
 RUN git clone https://github.com/merbanan/rtl_433
@@ -35,7 +33,8 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 RUN apk add --no-cache libusb \
-    librtlsdr
+    librtlsdr \
+    mosquitto-clients
 WORKDIR /root
 COPY --from=builder /build/root/ /
 
